@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+* {
+  font-family: Inter, sans-serif;
+  font-style: normal
+}
+body{
+  background: $secondary;
+}
+
+.full-width {
+  min-width: 100%;
+  width: 100%;
+}
+.primary--text{
+  color: $primary !important;
+}
