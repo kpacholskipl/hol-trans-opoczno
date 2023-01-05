@@ -30,7 +30,7 @@ export default {
 .home-page {
   height: 100vh;
   width: 100vw;
-  background: url('~static/home.jpg') no-repeat center;
+  background: url('~static/home.png') no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -38,9 +38,9 @@ export default {
 .home-page__blur {
   position: absolute;
   background-color: #111111;
-  height: 20vh;
-  top: 90vh;
-  filter: blur(25px);
+  height: 10vh;
+  top: 99.5vh;
+  filter: blur(4px);
   width: 100vw;
   left: 0;
 }

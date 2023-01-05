@@ -17,14 +17,14 @@
     <v-container>
       <v-row class="mx-xl-15 mx-lg-5">
         <v-col class="px-xl-15 px-lg-5" cols="12" md="6" xl="6" lg="6"
-               v-for="index in $vuetify.breakpoint.smAndDown?4:6">
+               v-for="index in $vuetify.breakpoint.smAndDown?4:6" :key="index">
           <v-card class="opinions__card pt-7 px-7 pb-10">
             {{ items[index - 1].text }}
             <p class="grey--text" style="position: absolute;bottom: 0;right: 1vw"> {{ items[index - 1].name }}</p>
           </v-card>
         </v-col>
       </v-row>
-      <v-row >
+      <v-row class="hidden-md-and-up">
         <v-col class="d-xs-flex d-sm-flex" :class="{'text-center':$vuetify.breakpoint.mdAndDown}" cols="12">
 
           <v-btn outlined color="primary" class="mx-5 my-2 font-weight-bold" height="42px"
