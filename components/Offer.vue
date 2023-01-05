@@ -2,7 +2,7 @@
   <v-card class="offer secondary full-width" elevation="0">
     <h2 class="offer__offer offer__title text-center">Co oferuje <span class="primary--text"> Hol-Trans</span>?</h2>
     <v-row class="full-width mb-15 ma-0">
-      <v-col class="text-center" cols="6" md="3" lg="3" xl="3" v-for="item in items">
+      <v-col class="text-center" cols="6" md="3" lg="3" xl="3" v-for="(item,i) in items" :key="i+1">
         <div class="d-inline-flex flex-column align-content-center align-center offer__icon--wrapper">
           <v-img contain class="d-flex" :src="item.src" height="90px" width="90px"/>
           <p class="offer__icon--title text-center primary--text font-weight-bold">{{ item.title }}</p>
@@ -13,20 +13,20 @@
     <h2 class="offer__details offer__title text-center">Szczegółowa oferta</h2>
     <v-row class="px-10">
       <v-col class="hidden-sm-and-down d-md-flex d-lg-flex d-xl-flex align-content-center justify-center align-center"
-             col="4" v-for="number in 3">
+             col="4" v-for="(number,i) in 3" :key="i">
         <div class="offer__divider"></div>
         <ul class="offer__ul">
-          <li v-for="item in detailItems[number-1]">{{ item }}</li>
+          <li v-for="item in detailItems[number-1]" :key="item">{{ item }}</li>
         </ul>
       </v-col>
-      <v-col cols="12" class="hidden-md-and-up d-xs-flex d-sm-flex align-content-center justify-center align-center">
-        <v-row>
+      <v-col cols="12" class="hidden-md-and-up ">
+        <v-row class="d-xs-flex d-sm-flex align-content-center justify-center align-center">
           <v-col cols="1">
             <div class="offer__divider"></div>
           </v-col>
           <v-col cols="11">
             <ul>
-              <li v-for="item in [...detailItems[0],...detailItems[1],...detailItems[2]]">{{ item }}</li>
+              <li v-for="item in [...detailItems[0],...detailItems[1],...detailItems[2]]" :key="item">{{ item }}</li>
             </ul>
           </v-col>
         </v-row>

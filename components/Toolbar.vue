@@ -49,7 +49,7 @@
         <v-list-item-group
           active-class="primary--text"
         >
-          <v-list-item @click="scrollTo(item.id)" v-for="(item, i) in items">
+          <v-list-item @click="scrollTo(item.id)" :key="item.id" v-for="(item, i) in items">
             <v-list-item-title :key="i">{{ item.name }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
