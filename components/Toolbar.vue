@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar class="toolbar py-1 elevation-15" :color="isScrollingToUp?'secondary':'transparent'" fixed
+    <v-app-bar id="toolbar" class="toolbar py-1 elevation-15 toolbar-transparent" fixed
                height="80px">
       <img
         class="ml-xl-15 mr-xl-10"
@@ -99,14 +99,29 @@ export default {
     },
   },
   mounted() {
+    const toolbar = document.getElementById("toolbar")
     window.onscroll = () => {
-      this.isScrollingToUp = document.body.scrollTop > 50
+      console.log(window.scrollY)
+      if(window.scrollY === 0){
+        console.log("Pkt")
+        console.log(toolbar.classList)
+      }
+      if (window.scrollY < 50) {
+        toolbar.classList.add('toolbar-transparent')
+        toolbar.classList.remove('secondary')
+      } else {
+        toolbar.classList.add('secondary')
+        toolbar.classList.remove('toolbar-transparent')
+      }
     }
   }
 }
 </script>
 
 <style lang="scss">
+.toolbar-transparent {
+  background-color: transparent !important;
+}
 .toolbar .toolbar-title {
   font-size: 1rem;
 }
