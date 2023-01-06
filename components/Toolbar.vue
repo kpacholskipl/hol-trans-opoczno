@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <v-app-bar class="toolbar py-1 elevation-15" :color="isScrollingToUp?'secondary':'transparent'" fixed
                height="80px">
       <img
@@ -16,7 +15,7 @@
       <v-spacer/>
 
       <v-toolbar-title class="hidden-sm-and-down">
-        <a class="toolbar-item mx-2 white--text" v-for="item in items">
+        <a class="toolbar-item mx-2 white--text" @click="scrollTo(item.id)" :key="item.id" v-for="item in items">
           {{ item.name }}
         </a>
       </v-toolbar-title>
@@ -90,6 +89,7 @@ export default {
   },
   methods: {
     scrollTo(id) {
+      console.log(id)
       this.drawer = false
       this.$vuetify.goTo(id, {
         duration: 800,
@@ -97,15 +97,11 @@ export default {
         easing: "linear",
       })
     },
-    isScrollingUp() {
-      window.addEventListener('scroll', () => {
-        this.isScrollingToUp = window.pageYOffset > 50
-        console.log(window.pageYOffset)
-      })
-    }
   },
   mounted() {
-    this.isScrollingUp()
+    window.onscroll = () => {
+      this.isScrollingToUp = document.body.scrollTop > 50
+    }
   }
 }
 </script>

@@ -11,14 +11,18 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Pomoc drogowa Hol-Trans Przemysław Bogusławski',
+    title: 'Hol-Trans',
     htmlAttrs: {
       lang: 'pl'
     },
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''},
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Pomoc Drogowa Opoczno i okolice dostępna 24 godziny 7 dni w tygodniu. Holowanie samochodów osobowych i ciężarowych. Auta zastępcze. Wynajem lawet'
+      },
       {name: 'format-detection', content: 'telephone=no'},
       {
         hid: 'og:description',
@@ -86,9 +90,14 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
-
-  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
+  modules: [
+    '@nuxtjs/robots'
+  ],
+  robots: {
+    UserAgent: '*',
+    Disallow: ''
+  },
+// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
@@ -107,10 +116,10 @@ export default {
     }
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+// Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // extend(config, ctx) {
-    // } // blah blah
+// extend(config, ctx) {
+// } // blah blah
 
   }
 }
