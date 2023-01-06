@@ -4,7 +4,7 @@
     <v-row class="full-width mb-15 ma-0">
       <v-col class="text-center" cols="6" md="3" lg="3" xl="3" v-for="(item,i) in items" :key="i+1">
         <div class="d-inline-flex flex-column align-content-center align-center offer__icon--wrapper">
-          <v-img contain class="d-flex" :src="item.src" height="90px" width="90px"/>
+          <v-img al contain class="d-flex" :src="item.src" height="90px" width="90px" :alt="item.title"/>
           <p class="offer__icon--title text-center primary--text font-weight-bold">{{ item.title }}</p>
           <p class="offer__icon--subtitle text-center mx-lg-10 mx-xl-10">{{ item.subtitle }}</p>
         </div>

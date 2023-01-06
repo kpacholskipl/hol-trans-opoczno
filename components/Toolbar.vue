@@ -6,6 +6,7 @@
         class="ml-xl-15 mr-xl-10"
         src="~/assets/logo.png"
         height="70%"
+        alt="logo"
       />
       <v-toolbar-title class="my-auto hidden-md-and-down">
         <p class="toolbar-title my-0 font-weight-bold">Pomoc Drogowa <span class="primary--text">Hol-Trans</span></p>
