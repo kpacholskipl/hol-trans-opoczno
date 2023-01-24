@@ -10,7 +10,7 @@
       />
       <v-toolbar-title class="my-auto hidden-md-and-down">
         <p class="toolbar-title my-0 font-weight-bold">Pomoc Drogowa <span class="primary--text">Hol-Trans</span></p>
-        <p class="toolbar-subtitle my-0">Przemyslaw boguslawski</p>
+        <p class="toolbar-subtitle my-0">Przemysław Boguslawski</p>
       </v-toolbar-title>
       <v-spacer class="hidden-sm-and-down"/>
       <v-spacer/>
